@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Composer:</strong>
+  <%= @repertoire.composer %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @repertoire.title %>
+</p>
+
+<p>
+  <strong>Date performed:</strong>
+  <%= @repertoire.date_performed %>
+</p>
+
+<p>
+  <strong>Ensemble performed:</strong>
+  <%= @repertoire.ensemble_performed %>
+</p>
+
+<%= link_to 'Edit', edit_repertoire_path(@repertoire) %> |
+<%= link_to 'Back', repertoires_path %>

@@ -1,0 +1,37 @@
+<%= form_with(model: repertoire, local: true) do |form| %>
+  <% if repertoire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(repertoire.errors.count, "error") %> prohibited this repertoire from being saved:</h2>
+
+      <ul>
+      <% repertoire.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :composer %>
+    <%= form.text_field :composer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_performed %>
+    <%= form.date_select :date_performed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ensemble_performed %>
+    <%= form.text_field :ensemble_performed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
